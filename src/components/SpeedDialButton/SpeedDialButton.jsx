@@ -20,22 +20,22 @@ export const SpeedDialButton = ({ products }) => {
     setDialogVisible(false);
   };
 
-  const addHelicopter = (data) => {
-    products.push(data);
-  };
+  // const addHelicopter = (data) => {
+  //   products.push(data);
+  // };
 
-  const deleteHelicopter = (id) => {
-    products = products.filter((item) => item.id !== id);
-  };
+  // const deleteHelicopter = (id) => {
+  //   products = products.filter((item) => item.id !== id);
+  // };
 
-  const updateHelicopter = (id, data) => {
-    products = products.map((item) => {
-      if (item.id === id) {
-        return data;
-      }
-      return item;
-    });
-  };
+  // const updateHelicopter = (id, data) => {
+  //   products = products.map((item) => {
+  //     if (item.id === id) {
+  //       return data;
+  //     }
+  //     return item;
+  //   });
+  // };
 
   
   console.log(products);
