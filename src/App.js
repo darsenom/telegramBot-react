@@ -1,11 +1,17 @@
 import { useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Header } from "./components/Header/Header";
 import { ProductList } from "./components/ProductList/ProductList";
 import { Form } from "./components/Form/Form";
 // import { useTelegram } from './hooks/useTelegram';
 import { SpeedDialButton } from "./components/SpeedDialButton/SpeedDialButton";
+import InfoButton from "./components/InfoButton/InfoButton";
+import FactorTable from "./components/FactorTable/FactorTable";
+
+import { PageOne, PageTwo } from './components/Pages/Pages';
+
+
 
 const products = [
   {
@@ -63,13 +69,33 @@ function App() {
   return (
     <div className="App">
       <Header>Заголовок</Header>
+      <InfoButton/>
+      
       <Routes>
         <Route index element={<ProductList products={products} />}></Route>
         <Route path={"form"} element={<Form />}></Route>
+
+        <Route path="one" element={<PageOne />} />
+        <Route path="two" element={<PageTwo />} />
       </Routes>
       <SpeedDialButton products={products} />
+
+      <FactorTable/>
     </div>
   );
 }
+
+// function Pages() {
+//   return (
+//     <BrowserRouter>
+//       <Routes>
+//         <Route path="one" element={<PageOne />} />
+//         <Route path="two" element={<PageTwo />} />
+//       </Routes>
+//     </BrowserRouter>
+//   );
+// }
+
+
 
 export default App;
