@@ -11,3 +11,4 @@ const BuildPage = (index) => (
 
 export const PageOne = () => BuildPage(1);
 export const PageTwo = () => BuildPage(2);
+export const PageThree = () => BuildPage(3);

@@ -68,16 +68,21 @@ export default function FactorTable() {
 
     return (
         <div className="card">
-            <DataTable value={data} tableStyle={{ padding: '0 90px' }}>
+
+          {data.map((item) => (<div key={item.id}>{item.name === 'React' && (<div><h1>REACT</h1></div>)}</div>))}
+
+
+
+            {/* <DataTable value={data} tableStyle={{ padding: '0 90px' }}>
                 <Column field="id" header="Id"></Column>
                 <Column field="name" header="Name"></Column>
                 <Column field="pain" header="Pain"></Column>
                 <Column field="difficulty" header="Difficulty"></Column>
                 <Column field="chaos" header="Chaos"></Column>
                 <Column field="beaty" header="Beaty"></Column>
-            </DataTable>
+            </DataTable> */}
+            
         </div>
-    );
-}
-
-
+  
+);
+    }

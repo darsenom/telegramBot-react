@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import "./App.css";
 import { Header } from "./components/Header/Header";
 import { ProductList } from "./components/ProductList/ProductList";
@@ -9,7 +9,8 @@ import { SpeedDialButton } from "./components/SpeedDialButton/SpeedDialButton";
 import InfoButton from "./components/InfoButton/InfoButton";
 import FactorTable from "./components/FactorTable/FactorTable";
 
-import { PageOne, PageTwo } from './components/Pages/Pages';
+import { PageOne, PageTwo, PageThree } from './components/Pages/Pages';
+import {MainPage} from './components/MainPage/MainPage';
 
 
 
@@ -58,6 +59,9 @@ const products = [
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ66BuCG0gFLwH_bboerZIKAc610chQG0-swURqSDtTLd6FmtgBFEDxX2SKB530SkqScL8&usqp=CAU",
   },
 ];
+
+// import MainPage from './Components/Header/Header';
+
 function App() {
   // const { tg } = useTelegram()
 
@@ -70,13 +74,16 @@ function App() {
     <div className="App">
       <Header>Заголовок</Header>
       <InfoButton/>
+      <MainPage/>
       
       <Routes>
         <Route index element={<ProductList products={products} />}></Route>
         <Route path={"form"} element={<Form />}></Route>
 
-        <Route path="one" element={<PageOne />} />
-        <Route path="two" element={<PageTwo />} />
+        <Route path="/" element={<MainPage/> } />
+          <Route path="first" element={<PageOne />} />
+          <Route path="two" element={<PageTwo />} />
+          <Route path="three" element={<PageThree />} />
       </Routes>
       <SpeedDialButton products={products} />
 
@@ -85,16 +92,19 @@ function App() {
   );
 }
 
-// function Pages() {
-//   return (
-//     <BrowserRouter>
-//       <Routes>
-//         <Route path="one" element={<PageOne />} />
-//         <Route path="two" element={<PageTwo />} />
-//       </Routes>
-//     </BrowserRouter>
-//   );
-// }
+
+// const MainPage = () => (
+//   <nav>
+//     <ul>
+//       <li>
+//         <Link to="/one">Page One</Link>
+//       </li>
+//       <li>
+//         <Link to="/two">Page Two</Link>
+//       </li>
+//     </ul>
+//   </nav>
+// );
 
 
 
