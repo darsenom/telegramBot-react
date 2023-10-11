@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 // import { ProductService } from './service/ProductService';
@@ -6,14 +6,14 @@ import { Column } from 'primereact/column';
 export default function FactorTable() {
     // const [products] = useState([]);
 
-  const columns = [
-    {field: 'id', header: 'ID'},
-    {field: 'name', header: 'Имя'},
-    {field: 'pain', header: 'Коэффициент боли'},
-    {field: 'difficulty', header: 'Коэффициент сложности'},
-    {field: 'chaos', header: 'Коэффициент хаоса'},
-    {field: 'beaty', header: 'Коэффициент красоты кода'},
-  ]
+  // const columns = [
+  //   {field: 'id', header: 'ID'},
+  //   {field: 'name', header: 'Имя'},
+  //   {field: 'pain', header: 'Коэффициент боли'},
+  //   {field: 'difficulty', header: 'Коэффициент сложности'},
+  //   {field: 'chaos', header: 'Коэффициент хаоса'},
+  //   {field: 'beaty', header: 'Коэффициент красоты кода'},
+  // ]
 
   const data = [
     {
@@ -73,14 +73,14 @@ export default function FactorTable() {
 
 
 
-            {/* <DataTable value={data} tableStyle={{ padding: '0 90px' }}>
+            <DataTable value={data} tableStyle={{ padding: '0 90px' }}>
                 <Column field="id" header="Id"></Column>
                 <Column field="name" header="Name"></Column>
                 <Column field="pain" header="Pain"></Column>
                 <Column field="difficulty" header="Difficulty"></Column>
                 <Column field="chaos" header="Chaos"></Column>
                 <Column field="beaty" header="Beaty"></Column>
-            </DataTable> */}
+            </DataTable>
             
         </div>
   
